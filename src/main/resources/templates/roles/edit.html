@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="/fragment/library.html::head('list role')">
+</head>
+<body >
+<nav th:replace="/fragment/library.html::nav">
+
+</nav >
+<div class="container">
+    <h2>Edit Form</h2>
+    <form action="/role/saveedit" method="post" th:object="${role}">
+
+        <input type="text" hidden="hidden" class="form-control" id="id" name="id" readonly th:field="*{id}">
+
+        <div class="form-group">
+            <label for="rolename">Role Name:</label>
+            <input type="text" class="form-control" id="rolename" name="rolename" required th:field="*{rollname}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
